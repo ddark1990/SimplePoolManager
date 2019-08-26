@@ -3,6 +3,7 @@
 [Oo]bj/
 [Bb]uild/
 [Bb]uilds/
+[Aa]ssetStoreTools/
 Assets/AssetStoreTools*
 
 # Visual Studio cache directory
@@ -34,3 +35,4 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+PoolManagerPlugin/Assets/AssetStoreTools.meta
