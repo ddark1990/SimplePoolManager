@@ -58,9 +58,9 @@ public class SimplePoolManagerEditor : Editor
 
         foreach (var type in Enum.GetValues(typeof(ObjectPool.PoolType)))
         {
+            //DrawDefaultInspector(); //for debugs
             var num = Convert.ToInt32(type);
             EditorGUILayout.Space();
-            DrawDefaultInspector();
             EditorGUILayout.BeginHorizontal(GUI.skin.window);
             EditorGUILayout.BeginVertical(GUI.skin.button);
             EditorGUI.indentLevel++;

@@ -719,12 +719,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PooledObjects: []
-  Pools:
-  - poolType: 0
-    PoolName: awd
-    ObjectToPool: {fileID: 929741107408669026, guid: 4a0df2b9e386a9f48b89c3a66fa68ca2,
-      type: 3}
-    PoolSize: 12
+  Pools: []
   ExpandIfEmpty: 0
   ActiveObjects: 0
   InactiveObjects: 0
