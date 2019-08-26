@@ -1,5 +1,5 @@
 # SimplePoolManager
-Pool Manager plugin for unity with a custom inspector.
+Pool Manager plugin for unity with a custom inspector. Help cut down you're instantiation times with this simple pool manager.
 
 # Overview: 
 This is a simple pool manager that allows you to pool any unity GameObject with ease. Has a custom built inspector for easy use and has the option to expand the pools if they run out.
