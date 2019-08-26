@@ -29,3 +29,6 @@ Its interfaced for OnObjectSpawn & OnObjectDespawn with IPooledObject which you 
 
 # Disclamer
 Right now you cannot add pools at runtime very easily.
+
+# ToDo
+Fix bugs if any arise.
