@@ -7,7 +7,7 @@ public class UIController : MonoBehaviour
     public static UIController Instance;
 
     public Transform SpawnPoint;
-    public List<GameObject> PooledObjects;
+    public List<GameObject> PooledObjects; //being added into by the interface on the objects, added by sceneprefab.cs script
 
     private SimplePoolManager _poolMan;
 

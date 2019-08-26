@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class SimplePoolManager : MonoBehaviour
@@ -62,12 +63,6 @@ public class SimplePoolManager : MonoBehaviour
 
             foreach (var pool in Pools)
             {
-                if (pool.PoolSize == 0)
-                {
-                    Debug.LogWarning("You're pool size is 0");
-                    return;
-                }
-
                 Queue<GameObject> objectPool = new Queue<GameObject>();
 
                 if (num != (int) pool.poolType) continue;
@@ -119,8 +114,26 @@ public class SimplePoolManager : MonoBehaviour
             return null;
         }
 
+        if (!PoolDictionary.ContainsKey(poolName))
+        {
+            Debug.LogWarning("Pool does not exist.");
+            return null;
+        }
+
+        var list = PoolDictionary[poolName].ToList();
+
         if (PoolDictionary[poolName].Count.Equals(0) && ExpandIfEmpty)
         {
+            if (_objToSpawn == null)
+            {
+                for (int i = 0; i < Pools.Count; i++)
+                {
+                    var pool = Pools[i];
+
+                    if (pool.ObjectToPool.name == poolName) _objToSpawn = pool.ObjectToPool;
+                }
+            }
+
             var obj = Instantiate(_objToSpawn, pos, rot);
             PooledObjects.Add(obj);
             PoolDictionary[poolName].Enqueue(obj);
