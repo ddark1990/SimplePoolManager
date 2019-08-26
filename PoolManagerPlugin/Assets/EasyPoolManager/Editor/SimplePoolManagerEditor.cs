@@ -45,7 +45,6 @@ public class SimplePoolManagerEditor : Editor
     {
         _getTarget.Update();
         _listSize = _thisList.arraySize;
-        _expandBool.boolValue = _expandPoolToggle;
 
         while (_showPool.Count < _thisList.arraySize)
         {
@@ -58,7 +57,7 @@ public class SimplePoolManagerEditor : Editor
 
         foreach (var type in Enum.GetValues(typeof(ObjectPool.PoolType)))
         {
-            //DrawDefaultInspector(); //for debugs
+            DrawDefaultInspector(); //for debugs
             var num = Convert.ToInt32(type);
             EditorGUILayout.Space();
             EditorGUILayout.BeginHorizontal(GUI.skin.window);
@@ -146,7 +145,7 @@ public class SimplePoolManagerEditor : Editor
             EditorGUILayout.BeginHorizontal(GUI.skin.box, GUILayout.Width(1));
             EditorGUI.indentLevel--;
 
-            _expandPoolToggle = EditorGUILayout.Toggle("Expand Pool's If Empty", _expandPoolToggle);
+            _expandBool.boolValue = EditorGUILayout.Toggle("Expand Pool's If Empty", _expandBool.boolValue);
 
             EditorGUI.indentLevel++;
             EditorGUILayout.EndHorizontal();
