@@ -25,7 +25,7 @@ Exposed (Public) Variables:
 ![](PoolManagerPlugin/PoolManagerPics/pm1.png)
 
 # Interface:
-Its interfaced for OnObjectSpawn & OnObjectDespawn with IPooledObject which you can add to any object that you are pooling to get subscribe to those events.
+Its interfaced for OnObjectSpawn & OnObjectDespawn with IPooledObject which you can add to any object that you are pooling to get subscribed to those events.
 
 # Disclamer
 Right now you cannot add pools at runtime very easily.
